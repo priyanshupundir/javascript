@@ -62,6 +62,40 @@
             message: 'hello'
         };
         const object2 = object1;//copy the reference
+
+        object1.message = 'good job!';
+        console.log(object1);//good job
+        console.log(object2);//good job
+
+        const objects3 = {
+            message:'good job!'
+        };
+        console.log(objects3 === object1);//false
+        console.log(object2 === object1);//true
+
+        //shortcut for objects
+        const object4 = {
+            message: 'good job1',
+            price: 799
+        };
+        //const message = object4.message;
+        const {message, price} = object4; //destructing
+        console.log(message);//good job
+        console.log(price);//799 
+
+        // shorthand property
+        const object5 = {
+            //message: message
+            message ,
+            //method: function function1(){
+               // console.log('method');
+            //}
+            method() {
+                console.log('method');//same as above
+            }
+        };
+        console.log(object5);//good job
+        object5.method();//method
     </script>
 </body>
 </html>
